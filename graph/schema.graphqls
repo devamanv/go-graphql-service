@@ -1,0 +1,15 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type SLA {
+  id: ID!
+  name: String!
+  totalStorage: Float! # Storage in bytes
+}
+
+type Query {
+  slas: [SLA!]!
+  sla(id: ID!): SLA
+  totalStorage: Float! # Total storage across all SLAs
+}
